@@ -1,9 +1,9 @@
 ---
 - name: Installs wordpress
-  hosts: all
+  hosts: 35.177.7.126
   become: yes
   become_method: sudo
-  tasks:
+  tasks: 
     - name: Install necessary packages
       package:
         name: “{{item}}”
