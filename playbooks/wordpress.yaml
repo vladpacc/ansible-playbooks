@@ -67,4 +67,4 @@
         record: “wordpress.com”
         type: A
         ttl: 172800
-        value: “35.177.7.126”
+        value: “3.10.4.25”
