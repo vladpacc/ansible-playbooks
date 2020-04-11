@@ -66,5 +66,5 @@
         zone: “devoploadbalancer.com.”
         record: “wordpress.com”
         type: A
-        ttl: 7200
+        ttl: 172800
         value: “35.177.7.126”
