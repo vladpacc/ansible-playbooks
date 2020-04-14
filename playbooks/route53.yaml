@@ -1,0 +1,12 @@
+---
+- name: Create route53 entry
+  hosts: localhost
+  tasks:
+    - name: Route53 a record
+      route53:
+        state: "present"
+        zone: "devoploadbalancer.com"
+        record: "wordpress.devoploadbalancer.com"
+        type: A
+        ttl: 7200
+        value: "34.220.140.185" #change Ip
