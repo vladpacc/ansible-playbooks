@@ -1,0 +1,12 @@
+---   #sudo pip install boto
+- name: Creates ec2 instance
+  hosts: localhost
+  tasks:
+    - name: Create instances
+      ec2:
+        key_name: "{{ansible}}"
+        instance_type: "{{t2.medium}}"
+        image: "{{ami-0affd4508a5d2481b}}"
+        count: "{{1}}"
+        vpc_subnet_id: "{{subnet-046a292cfa35df9f0}}"
+        region: "{{us-east-1}}"
