@@ -22,8 +22,8 @@
       enabled: false
   - name: Get Key
     shell: "r1soft-setup --get-key http://backup.acirrustech.com/" 
-  handlers: 
-    name: AGENT_RESTART
+    handlers: 
+  - name: AGENT_RESTART
     service: 
       name: cdp-agent 
       state: restarted
