@@ -27,7 +27,7 @@
 
   - name: Get Key
     when: (ansible_distribution == "CentOS" and ansible_distribution_major_version == "6")
-    shell: "r1soft-setup --get-key http://backup.acirrustech.com/" 
+    shell: "r1soft-setup --get-key http://backup.35.177.252.228/.com/" 
 
   
   handlers: 
