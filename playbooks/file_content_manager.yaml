@@ -1,6 +1,6 @@
 ---
 - name: Manage Files
-  hosts: all
+  hosts: localhost
   become: true
   become_method: sudo
   tasks:
