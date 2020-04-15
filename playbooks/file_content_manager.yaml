@@ -7,4 +7,5 @@
   - name: Manage etc motd
     lineinfile:
       path: "/etc/motd"
-      line: "This is changed"
+      regexp: "^This machine is managed by SysEng"
+      line: "This machine is managed by DevOps"
