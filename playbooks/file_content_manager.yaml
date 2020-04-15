@@ -9,3 +9,12 @@
       path: "/etc/motd"
       regexp: "^This machine is managed by SysEng"
       line: "This machine is managed by DevOps"
+
+
+  - name: Block
+    blockingfile:
+      path: "/tmp/non_existent"
+      block: 
+        This file is created by me 
+        and managed by me
+      crete: yes
