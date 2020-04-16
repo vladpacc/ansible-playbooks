@@ -18,7 +18,7 @@
     notify: AGENT_RESTART
 
   - name: Stop iptables
-      service:
+    service:
       name: iptables
       state: stopped
       enabled: false
