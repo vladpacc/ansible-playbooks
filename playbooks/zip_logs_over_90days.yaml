@@ -6,4 +6,4 @@
   user: centos
   tasks:
   - name: Run find command
-    shell: 'find   /var/log     -type f      -name "*.log"     -mtime +90    -exec   gzip -v9   {} +'
+    shell: 'find   /var/log -type f -name "*.log"     -mtime +90    -exec   gzip -v9   {} +'
