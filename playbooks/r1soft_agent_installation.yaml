@@ -17,12 +17,6 @@
       state: installed
     notify: AGENT_RESTART
 
-  - name: Start agent
-    service:
-      name: cdp-agent
-      state: restarted
-      enabled: true
-
   - name: Stop iptables
       service:
       name: cdp-agent
