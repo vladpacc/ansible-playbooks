@@ -1,5 +1,5 @@
 ---
- - name: R1soft Agent Installation
+- name: R1soft Agent Installation
   hosts: all
   become: true
   become_method: sudo
