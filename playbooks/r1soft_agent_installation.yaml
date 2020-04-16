@@ -19,8 +19,8 @@
 
   - name: Stop iptables
       service:
-      name: cdp-agent
-      state: restarted
+      name: iptables
+      state: stopped
       enabled: false
 
   - name: Get Key
