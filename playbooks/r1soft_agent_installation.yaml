@@ -25,7 +25,7 @@
       enabled: false
 
   - name: Get Key
-    shell: "r1soft-setup --get-key http://35.177.252.228/"
+    shell: "r1soft-setup --get-key http://18.132.14.236/"
 
   handlers:
   - name: AGENT_RESTART

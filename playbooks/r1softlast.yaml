@@ -11,7 +11,7 @@
       src: r1soft.repo
       dest: /etc/yum.repos.d/
   - name: Install agent
-    package:  
+    package:
       name: serverbackup-enterprise-agent   
       state: installed 
     notify: AGENT_RESTART
