@@ -1,29 +1,37 @@
---
+---
 - name: R1soft Agent Installation
   hosts: all
   become: true
   become_method: sudo
   user: centos
-  when: (ansible_distribution == "CentOS" and ansible_distribution_major_version == "6")
   tasks:
   - name: Create repo
+    when: (ansible_distribution == "CentOS" and ansible_distribution_major_version == "7")
     copy:
       src: r1soft.repo
       dest: /etc/yum.repos.d/
+
   - name: Install agent
-    package:
+    when: (ansible_distribution == "CentOS" and ansible_distribution_major_version == "7")
+    package:  
       name: serverbackup-enterprise-agent   
       state: installed 
     notify: AGENT_RESTART
+
   - name: Stop iptables
+    when: (ansible_distribution == "CentOS" and ansible_distribution_major_version == "7")
     service: 
       name: iptables
       state: stopped
       enabled: false
+
   - name: Get Key
-    shell: "r1soft-setup --get-key http://18.132.14.236/" 
+    when: (ansible_distribution == "CentOS" and ansible_distribution_major_version == "7")
+    shell: "r1soft-setup --get-key http://18.132.14.237/" 
+
+  
   handlers: 
-    name: AGENT_RESTART
+  - name: AGENT_RESTART
     service: 
       name: cdp-agent 
       state: restarted
